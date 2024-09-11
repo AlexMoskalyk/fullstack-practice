@@ -1,1 +1,1 @@
-{"version":3,"file":"commonHelpers.js","sources":[],"sourcesContent":[],"names":[],"mappings":""}
+{"version":3,"file":"commonHelpers.js","sources":["../src/main.js"],"sourcesContent":["const fn = arr => {\n  let distinctValues = [...new Set(arr)];\n  return distinctValues;\n};\n\n// Example call\nconsole.log(fn([4, 10, 10, 9]));\n"],"names":["fn","arr"],"mappings":"ssBAAA,MAAMA,EAAKC,GACY,CAAC,GAAG,IAAI,IAAIA,CAAG,CAAC,EAKvC,QAAQ,IAAID,EAAG,CAAC,EAAG,GAAI,GAAI,CAAC,CAAC,CAAC"}
