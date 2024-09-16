@@ -28,19 +28,34 @@ const calculateBricksCount = (width, height) => {
   let smallCount = 0;
 
   const rows = height / 5;
+
+  const addRemainingLargeBricks = (width, mediumBrick, smallBrick) => {
+    const remainingWidth = width - mediumBrick - smallBrick;
+    return remainingWidth / largeBrick;
+  };
+
   for (let i = 1; i <= rows; i += 1) {
-    if (i % 3 === 1) {
-      largeCount += width / largeBrick;
-    } else if (i % 3 === 2) {
-      mediumCount += 1;
-      smallCount += 1;
-      const remainingWidth = width - mediumBrick - smallBrick;
-      largeCount += remainingWidth / largeBrick;
-    } else if (i % 3 === 0) {
-      smallCount += 1;
-      mediumCount += 1;
-      const remainingWidth = width - mediumBrick - smallBrick;
-      largeCount += remainingWidth / largeBrick;
+    const rowPattern = i % 3;
+
+    switch (rowPattern) {
+      case 1:
+        largeCount += width / largeBrick;
+        break;
+
+      case 2:
+        mediumCount += 1;
+        smallCount += 1;
+        largeCount += addRemainingLargeBricks(width, mediumBrick, smallBrick);
+        break;
+
+      case 0:
+        smallCount += 1;
+        mediumCount += 1;
+        largeCount += addRemainingLargeBricks(width, mediumBrick, smallBrick);
+        break;
+
+      default:
+        break;
     }
   }
 
@@ -54,3 +69,43 @@ const calculateBricksCount = (width, height) => {
 
   return result;
 };
+
+// WITH IF ELSE VARIANT
+// const calculateBricksCount = (width, height) => {
+//   const largeBrick = 60;
+//   const mediumBrick = 40;
+//   const smallBrick = 20;
+
+//   let largeCount = 0;
+//   let mediumCount = 0;
+//   let smallCount = 0;
+
+//   const rows = height / 5;
+
+//   for (let i = 1; i <= rows; i += 1) {
+
+//     if (i % 3 === 1) {
+//       largeCount += width / largeBrick;
+//     } else if (i % 3 === 2) {
+//       mediumCount += 1;
+//       smallCount += 1;
+//       const remainingWidth = width - mediumBrick - smallBrick;
+//       largeCount += remainingWidth / largeBrick;
+//     } else if (i % 3 === 0) {
+//       smallCount += 1;
+//       mediumCount += 1;
+//       const remainingWidth = width - mediumBrick - smallBrick;
+//       largeCount += remainingWidth / largeBrick;
+//     }
+//   }
+
+//   let result = `${largeCount}L`;
+//   if (mediumCount > 0) {
+//     result += `${mediumCount}M`;
+//   }
+//   if (smallCount > 0) {
+//     result += `${smallCount}S`;
+//   }
+
+//   return result;
+// };
