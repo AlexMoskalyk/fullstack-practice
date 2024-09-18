@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/book-the-room.css" />
+    <title>Page 2</title>
+  </head>
+  <body>
+    <section>
+      <a href="../index.html">Go to home</a>
+    </section>
+
+    <div class="container">
+      <h1>Hotel Room Booking System</h1>
+
+      <div>
+        <h3>Create a Room</h3>
+        <input type="text" id="roomNumber" placeholder="Room Number" />
+        <button id="createRoom">Create Room</button>
+      </div>
+
+      <div>
+        <h3>Book a Room</h3>
+        <input
+          type="text"
+          id="bookRoomNumber"
+          placeholder="Room Number to Book"
+        />
+        <button id="bookRoom">Book Room</button>
+      </div>
+
+      <div>
+        <h3>Booked Rooms</h3>
+        <div id="bookedRoomsList">No rooms booked yet.</div>
+      </div>
+    </div>
+    <script type="module" src="../jsDocsTask/book-the-room.js"></script>
+  </body>
+</html>
