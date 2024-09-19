@@ -1,43 +1,50 @@
 class Hotel {
   constructor() {
-    this.rooms = [];
-    this.bookedRooms = [];
+    this.rooms = new Set();
+    this.bookedRooms = new Set();
+    this.notificationElement = document.getElementById('notification');
+  }
+
+  showNotification(message, success = true) {
+    this.notificationElement.textContent = message;
+    this.notificationElement.style.color = success ? 'green' : 'red';
+    this.notificationElement.classList.remove('hidden');
+
+    setTimeout(() => {
+      this.notificationElement.classList.add('hidden');
+    }, 3000);
   }
 
   createRoom(roomNumber) {
-    if (!this.rooms.includes(roomNumber)) {
-      this.rooms.push(roomNumber);
-      alert(`Room ${roomNumber} created successfully!`);
+    if (!this.rooms.has(roomNumber)) {
+      this.rooms.add(roomNumber);
+      this.showNotification(`Room ${roomNumber} created successfully!`, true);
     } else {
-      alert(`Room ${roomNumber} already exists!`);
+      this.showNotification(`Room ${roomNumber} already exists!`, false);
     }
   }
 
   bookRoom(roomNumber) {
-    if (
-      this.rooms.includes(roomNumber) &&
-      !this.bookedRooms.includes(roomNumber)
-    ) {
-      this.bookedRooms.push(roomNumber);
+    if (this.rooms.has(roomNumber) && !this.bookedRooms.has(roomNumber)) {
+      this.bookedRooms.add(roomNumber);
       this.displayBookedRooms();
-      alert(`Room ${roomNumber} booked successfully!`);
+      this.showNotification(`Room ${roomNumber} booked successfully!`, true);
     } else {
-      alert(`Room ${roomNumber} is not available or already booked.`);
+      this.showNotification(
+        `Room ${roomNumber} is not available or already booked.`,
+        false
+      );
     }
   }
 
   displayBookedRooms() {
     const bookedRoomsList = document.getElementById('bookedRoomsList');
-    bookedRoomsList.innerHTML = '';
-    if (this.bookedRooms.length === 0) {
-      bookedRoomsList.innerHTML = 'No rooms booked.';
-    } else {
-      this.bookedRooms.forEach(room => {
-        const roomElement = document.createElement('p');
-        roomElement.textContent = `Room ${room}`;
-        bookedRoomsList.appendChild(roomElement);
-      });
-    }
+    bookedRoomsList.innerHTML =
+      this.bookedRooms.size === 0
+        ? 'No rooms booked.'
+        : Array.from(this.bookedRooms)
+            .map(room => `<p>Room ${room}</p>`)
+            .join('');
   }
 }
 
@@ -51,7 +58,11 @@ const bookRoomNumber = document.getElementById('bookRoomNumber');
 createRoomBtn.addEventListener('click', () => {
   if (isNaN(roomNumber.value) || roomNumber.value.trim() === '') {
     roomNumber.value = '';
-    return alert('Please enter a valid room number (numbers only).');
+    hotel.showNotification(
+      'Please enter a valid room number (numbers only).',
+      false
+    );
+    return;
   }
   hotel.createRoom(roomNumber.value);
   roomNumber.value = '';
@@ -60,7 +71,11 @@ createRoomBtn.addEventListener('click', () => {
 bookRoomBtn.addEventListener('click', () => {
   if (isNaN(bookRoomNumber.value) || bookRoomNumber.value.trim() === '') {
     bookRoomNumber.value = '';
-    return alert('Please enter a valid room number (numbers only).');
+    hotel.showNotification(
+      'Please enter a valid room number (numbers only).',
+      false
+    );
+    return;
   }
   hotel.bookRoom(bookRoomNumber.value);
   bookRoomNumber.value = '';
