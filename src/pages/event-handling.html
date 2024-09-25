@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/event-handling.css" />
+    <title>Event Handling</title>
+  </head>
+  <body>
+    <section>
+      <a href="../index.html">Go to home</a>
+
+      <div class="form-container">
+        <h2>User Registration</h2>
+        <form id="registrationForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+            />
+            <p class="error-message" id="nameError"></p>
+            <div class="tooltip" id="nameTooltip">
+              Name should be at least 3 characters.
+            </div>
+          </div>
+
+        
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+            />
+            <p class="error-message" id="emailError"></p>
+            <div class="tooltip" id="emailTooltip">
+              Enter a valid email (e.g., user@example.com).
+            </div>
+          </div>
+
+         
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+            />
+            <p class="error-message" id="passwordError"></p>
+            <div class="tooltip" id="passwordTooltip">
+              Password must be at least 6 characters long.
+            </div>
+          </div>
+
+          
+          <button type="submit" id="submitBtn">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <script type="module" src="../jsDocsTask/event-handling.js"></script>
+  </body>
+</html>
