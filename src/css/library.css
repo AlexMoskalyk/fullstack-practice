@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form input {
+    margin: 5px;
+    padding: 8px;
+}
+
+button {
+    padding: 8px 12px;
+}
+
+#library {
+    margin-top: 20px;
+}
+
+.book {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-button, .download-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.download-button {
+    background-color: #28a745;
+}
+
+.download-button:hover {
+    background-color: #218838;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+.hidden {
+    display: none;
+}

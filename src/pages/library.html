@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/library.css">
+    <title>Library</title>
+</head>
+<body>
+    <h1>Library Management System</h1>
+
+    <form id="bookForm">
+        <input type="text" id="title" placeholder="Book Title" required>
+        <input type="text" id="author" placeholder="Author" required>
+        <input type="number" id="year" placeholder="Year" required>
+
+        <!-- Radio buttons to choose between Book and EBook -->
+        <label>
+            <input type="radio" name="bookType" value="book" id="isBook" checked> Book
+        </label>
+        <label>
+            <input type="radio" name="bookType" value="ebook" id="isEBook"> EBook
+        </label>
+
+        <!-- Input for eBook file size (hidden initially) -->
+        <input type="number" id="fileSize" placeholder="File Size (MB)" class="hidden">
+
+        <button type="submit">Add Book</button>
+    </form>
+
+    
+    <div id="library"></div>
+    <script type="module" src="../jsDocsTask/library.js"></script>
+</body>
+</html>
