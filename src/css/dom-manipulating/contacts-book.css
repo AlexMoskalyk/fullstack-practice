@@ -1,0 +1,97 @@
+/* Basic Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+
+    height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Contact Form */
+.contact-form input {
+    padding: 10px;
+    width: 70%;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button.hidden {
+    display: none;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Search Bar */
+.search-bar input {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Contact List */
+.contact-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.contact-list button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-list button:hover {
+    background-color: #e60000;
+}
+
+.edit-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+.edit-btn:hover {
+    background-color: #218838;
+}
