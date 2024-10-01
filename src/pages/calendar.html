@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="../css/dom-manipulating/calendar.css">
+</head>
+<body>
+    <a href="../index.html">Go to home</a>
+    <div class="container">
+        <h1>Interactive Calendar</h1>
+
+       
+        <div id="calendar" class="calendar-container">
+            
+        </div>
+
+     
+        <div class="event-form">
+            <h2>Selected Date: <span id="selectedDate">None</span></h2>
+            <form id="addEventForm">
+                <input type="text" id="eventTitle" placeholder="Event Title" required>
+                <button type="submit">Add Event</button>
+            </form>
+            <div id="eventList">
+                <h3>Events:</h3>
+                <ul id="events"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module" src="../jsDocsTask//dom-manipulating/calendar.js"></script>
+</body>
+</html>

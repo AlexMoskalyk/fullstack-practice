@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/dom-manipulating/todolist.css">
+    <title>Todo List</title>
+</head>
+<body>
+    <a href="../index.html">Go to home</a>
+
+
+    <div class="container"></div>
+        <h1>Project Task List</h1>
+
+        
+        <section class="task-form">
+            <form id="addTaskForm">
+                <input type="text" id="taskInput" placeholder="Enter new task..." required>
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+
+  
+        <section class="task-filters">
+            <button id="showAll">All</button>
+            <button id="showCompleted">Completed</button>
+            <button id="showIncomplete">Incomplete</button>
+        </section>
+
+        <section class="task-list">
+            <ul id="taskList"></ul>
+        </section>
+    </div>
+
+    <script type="module" src="../jsDocsTask/dom-manipulating/todolist.js"></script>
+
+    
+</body>
+</html>
