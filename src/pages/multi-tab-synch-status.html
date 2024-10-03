@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/multi-tab-synch-status.css">
+    <title>Multi-tab Synch</title>
+</head>
+<body>
+    <div class="container">
+    <h1>Multi-Tab State Synchronization</h1>
+    <div>
+        <label for="themeSelect">Select Theme:</label>
+        <select id="themeSelect">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="languageSelect">Select Language:</label>
+        <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+        </select>
+    </div>
+
+    <div id="currentState">
+        <h3>Current State:</h3>
+        <p><strong>Theme:</strong> <span id="currentTheme">light</span></p>
+        <p><strong>Language:</strong> <span id="currentLanguage">en</span></p>
+    </div>
+</div>
+    <script type="module" src="../jsDocsTask/multi-tab-synch-status.js"></script>
+</body>
+</html>

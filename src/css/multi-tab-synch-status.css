@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label{
+    color: #333;
+
+}
+
+#currentState {
+    margin-top: 20px;
+    color: #333;
+}
+
+body.light-theme {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+select {
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    font-size: 16px;
+}
