@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/text-editor.css">
+    <title>Text Editor</title>
+</head>
+<body>
+    <a href="../index.html">Go to home</a>
+
+    <div class="container">
+        <h1>Dynamic Content Editor</h1>
+
+        <div class="toolbar">
+            <button id="boldBtn"><b>B</b></button>
+            <button id="italicBtn"><i>I</i></button>
+            <button id="underlineBtn"><u>U</u></button>
+        </div>
+
+        <div class="editor-controls">
+            <label for="tagSelect">Choose Tag:</label>
+            <select id="tagSelect">
+                <option value="p">Paragraph (p)</option>
+                <option value="h1">Header 1 (h1)</option>
+                <option value="h2">Header 2 (h2)</option>
+            </select>
+
+            <input type="text" id="contentInput" placeholder="Enter content">
+            <button id="addContentBtn">Add Content</button>
+        </div>
+
+        <button id="clearContentBtn">Clear All Content</button>
+
+        <div id="contentContainer">
+
+    <script type="module" src="../jsDocsTask/text-editor.js"></script>
+</body>
+</html>
