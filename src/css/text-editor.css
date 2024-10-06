@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.toolbar {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.editor-controls {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contentInput {
+    width: 70%;
+    padding: 10px;
+}
+
+button {
+    padding: 10px 20px;
+}
+
+#contentContainer div {
+    margin-bottom: 15px;
+}
+
+.editable {
+    padding: 10px;
+    border: 1px dashed #ccc;
+    cursor: text;
+}
+
+/* CSS classes to style text */
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+button.active {
+    background-color: #ccc;
+}

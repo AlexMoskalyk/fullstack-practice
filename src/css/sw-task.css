@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+#status {
+    padding: 10px;
+    background-color: lightgreen;
+    border: 1px solid green;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.offline #status {
+    background-color: lightcoral;
+    border: 1px solid red;
+}
+
+#fetchDataBtn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#fetchDataBtn:hover {
+    background-color: #45a049;
+}
+
+#dataDisplay {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
